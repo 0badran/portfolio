@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+}
+
+@keyframes logo-animation {
+  from {
+    transform: translateX(-20vh);
+    filter: brightness(50%);
+  }
+
+  to {
+    transform: translateX(0);
+    filter: brightness(100%);
+  }
+}
+
+@keyframes icons-animation {
+  from {
+    transform: translateY(-20vh);
+    filter: brightness(50%);
+  }
+
+  to {
+    transform: translateY(0);
+    filter: brightness(100%);
+  }
+}
+
+@keyframes title-animation {
+  from {
+    transform: scale(0.8);
+    filter: brightness(50%);
+  }
+
+  to {
+    transform: scale(1);
+    filter: brightness(100%);
+  }
+}
+
+@keyframes name-writer {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    text-shadow: 5px 5px #fff;
+    letter-spacing: 10px;
+    opacity: 0;
+  }
+}
+
+header {
+  background: linear-gradient(to right, #1F2937 60%, #4ADE80 40%);
+}
+
+#logo-animation {
+  animation: icons-animation 3s ease-in-out;
+}
+
+#icons-animation {
+  animation: icons-animation 3s ease-in-out;
+}
+
+.title-animation {
+  animation: title-animation 3s ease-in-out;
+}
+
+.name-writer {
+  animation: name-writer 4s ease-in;
+}
