@@ -36,12 +36,12 @@ export default function Home() {
       setState(true);
     }, 1000 * 4)
   }
-  AOS.init({
-    duration: 1000,
-  });
 
 
   useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
     if (!canvas.current) return;
     const parentElement = canvas.current.parentElement;
     const width = parentElement!.clientWidth;
