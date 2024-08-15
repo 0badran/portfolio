@@ -1,14 +1,9 @@
 "use client";
 import { montserrat } from "@/public/fonts/fonts";
 import Image from "next/image";
-import { FaLinkedin, FaFacebook, FaTwitter, FaGithub } from "react-icons/fa";
-import { FaArrowRightLong } from "react-icons/fa6";
-import logo from "@/app/favicon.ico";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import clsx from "clsx";
 import { useEffect, useRef, useState } from "react";
-import * as THREE from "three";
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import me from "@/public/images/me.png";
@@ -18,18 +13,21 @@ import portfolio from "@/public/images/portfolio.png";
 import pongGame from "@/public/images/pong-game.gif";
 import { skills } from "@/public/data/skills";
 import contactMe from "@/public/images/contact.jpeg";
-import Link from "next/link";
-
+import dynamic from "next/dynamic";
+const Header = dynamic(() => import("@/app/components/Header"));
+const Cube = dynamic(() => import("@/app/components/Cube"));
 
 export default function Home() {
   const [state, setState] = useState<boolean>(false);
   const nameTypewriter = useRef<HTMLDivElement>(null);
-  const canvas = useRef<HTMLCanvasElement>(null);
+
+
   const [text, helper] = useTypewriter({
     words: ["I'm", "Ahmed", "Badran", `I'm Ahmed Mohamed Badran`],
     typeSpeed: 100,
     deleteSpeed: 80,
   });
+
   const { isDone } = helper;
   if (isDone && nameTypewriter.current) {
     setTimeout(() => {
@@ -42,39 +40,6 @@ export default function Home() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-    });
-    if (!canvas.current) return;
-    const parentElement = canvas.current.parentElement;
-    const width = parentElement!.clientWidth;
-    const height = parentElement!.clientHeight;
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
-    camera.updateProjectionMatrix();
-    const renderer = new THREE.WebGLRenderer({
-      canvas: canvas.current,
-    });
-    renderer.setSize(width, height);
-    renderer.setAnimationLoop(animate);
-    const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const material = new THREE.MeshBasicMaterial({ color: 0x2AD87F });
-    const cube = new THREE.Mesh(geometry, material);
-    scene.background = new THREE.Color(0x1F2937);
-    scene.add(cube);
-    camera.position.z = 3;
-    const controls = new OrbitControls(camera, canvas.current);
-    controls.enableDamping = true;
-    controls.autoRotate = true;
-    function animate() {
-      controls.update();
-      renderer.render(scene, camera);
-    }
-    animate();
-    window.addEventListener('resize', () => {
-      const newWidth = parentElement!.clientWidth;
-      const newHeight = parentElement!.clientHeight;
-      renderer.setSize(newWidth, newHeight);
-      camera.aspect = newWidth / newHeight;
-      camera.updateProjectionMatrix();
     });
   }, []);
 
@@ -91,44 +56,7 @@ export default function Home() {
             <span className="text-5xl md:text-7xl"><Cursor cursorColor="#FFFFFF" cursorStyle="_" /></span>
           </div>
         </div>
-        {/* Profile accounts & Logo */}
-        <section className="flex flex-col md:flex-row justify-between items-center">
-          {
-            state && <>
-              <div id="logo-animation">
-                <Image src={logo} width={100} height={100} alt="logo" />
-              </div>
-
-              <div id="icons-animation" className="grid grid-cols-4 gap-24 my-4 md:gap-14 lg:gap-20 xl:mt-0 xl:grid-cols-6 xl:gap-4">
-                <span className={`${montserrat.className} hidden xl:block uppercase text-gray-800 col-span-2`}>profile accounts</span>
-                <a target="_blank" href="https://facebook.com/0ahmedbadran/"><FaFacebook className="text-green-400 md:text-gray-800 motion-safe:animate-bounce hover:animate-none" size={"1.5em"} /></a>
-                <a target="_blank" href="https://x.com/_ahmedbadran/"><FaTwitter className="text-green-400 md:text-gray-800 motion-safe:animate-bounce hover:animate-none" size={"1.5em"} /></a>
-                <a target="_blank" href="https://linkedin.com/in/ahmedbadran72/"><FaLinkedin className="text-gray-800 md:text-gray-800 motion-safe:animate-bounce hover:animate-none" size={"1.5em"} /></a>
-                <a target="_blank" href="https://github.com/0badran/"><FaGithub className="text-gray-800 motion-safe:animate-bounce hover:animate-none" size={"1.5em"} /></a>
-              </div>
-            </>
-          }
-        </section>
-        {/* Introduce section  */}
-        {
-          state &&
-          <div className="title-animation antialiased text-wrap  md:p-20 w-2/5">
-            <div className={`${montserrat.className}`}>
-              <div>
-                <h2 style={{ color: "#2AD87F" }}>Hello Everyone.</h2>
-                <h1 className="text-7xl text-white uppercase">I&apos;m Ahmed Badran</h1>
-              </div>
-              <div className="flex justify-between w-80 border border-2 border-green-400 mt-7">
-                <h2 className="text-white uppercase p-4">full-stack developer</h2>
-                <a href="#about">
-                  <div className="bg-gray-800 md:bg-green-400 p-4">
-                    <FaArrowRightLong size={"1.5em"} className="text-green-400 md:text-white" />
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        }
+        {state && <Header />}
       </header>
       {/* Main background */}
       <main className="mb-7 md:pt-10 lg:pt-20">
@@ -230,10 +158,8 @@ export default function Home() {
                   }
                 </div>
               </div>
-              {/* Right */}
-              <div className="w-36 h-36 m-auto sm:h-96 sm:w-96 md:w-full md:h-full md:m-0">
-                <canvas ref={canvas}></canvas>
-              </div>
+              {/* Cube */}
+              <Cube />
             </div>
           </section>
           {/* Contact Me Section */}
