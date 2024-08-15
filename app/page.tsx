@@ -13,8 +13,10 @@ import portfolio from "@/public/images/portfolio.png";
 import pongGame from "@/public/images/pong-game.gif";
 import { skills } from "@/public/data/skills";
 import contactMe from "@/public/images/contact.jpeg";
-import Cube from "@/app/components/Cube";
-import Header from "@/app/components/Header";
+import dynamic from "next/dynamic";
+const Header = dynamic(() => import("@/app/components/Header"));
+const Cube = dynamic(() => import("@/app/components/Cube"));
+
 
 export default function Home() {
 	const [state, setState] = useState<boolean>(false);
@@ -96,7 +98,7 @@ export default function Home() {
 							<h2 className={`${montserrat.className} m-0 text-white text-3xl lg:text-4xl`}>Recent Projects</h2>
 							<div className="border-b-2 border-green-400"></div>
 						</div>
-						<div className="grid grid-cols-3 gap-8" data-aos="zoom-in">
+						<div className="grid grid-cols-3 gap-8" data-aos="fade-up-right">
 							<a href="#">
 								<div className="transition mb-4 duration-700 origin-top-left hover:rotate-12">
 									<Image src={portfolio} width={700} height={700} placeholder={"blur"} alt="portfolio image" />

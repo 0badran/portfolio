@@ -11,7 +11,7 @@ export default function Cube() {
     const width = parentElement!.clientWidth;
     const height = parentElement!.clientHeight;
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
+    const camera = new THREE.PerspectiveCamera(25, width / height, 1, 1000);
     camera.updateProjectionMatrix();
     const renderer = new THREE.WebGLRenderer({
       canvas: canvas.current,
@@ -23,7 +23,7 @@ export default function Cube() {
     const cube = new THREE.Mesh(geometry, material);
     scene.background = new THREE.Color(0x1F2937);
     scene.add(cube);
-    camera.position.z = 3;
+    camera.position.z = 4;
     const controls = new OrbitControls(camera, canvas.current);
     controls.enableDamping = true;
     controls.autoRotate = true;
