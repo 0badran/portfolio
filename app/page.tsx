@@ -101,10 +101,10 @@ export default function Home() {
 
               <div id="icons-animation" className="grid grid-cols-4 gap-24 my-4 md:gap-14 lg:gap-20 xl:mt-0 xl:grid-cols-6 xl:gap-4">
                 <span className={`${montserrat.className} hidden xl:block uppercase text-gray-800 col-span-2`}>profile accounts</span>
-                <Link target="_blank" href="https://facebook.com/0ahmedbadran/"><FaFacebook className="text-green-400 md:text-gray-800 motion-safe:animate-bounce hover:animate-none" size={"1.5em"} /></Link>
-                <Link target="_blank" href="https://x.com/_ahmedbadran/"><FaTwitter className="text-green-400 md:text-gray-800 motion-safe:animate-bounce hover:animate-none" size={"1.5em"} /></Link>
-                <Link target="_blank" href="https://linkedin.com/in/ahmedbadran72/"><FaLinkedin className="text-gray-800 md:text-gray-800 motion-safe:animate-bounce hover:animate-none" size={"1.5em"} /></Link>
-                <Link target="_blank" href="https://github.com/0badran/"><FaGithub className="text-gray-800 motion-safe:animate-bounce hover:animate-none" size={"1.5em"} /></Link>
+                <a target="_blank" href="https://facebook.com/0ahmedbadran/"><FaFacebook className="text-green-400 md:text-gray-800 motion-safe:animate-bounce hover:animate-none" size={"1.5em"} /></a>
+                <a target="_blank" href="https://x.com/_ahmedbadran/"><FaTwitter className="text-green-400 md:text-gray-800 motion-safe:animate-bounce hover:animate-none" size={"1.5em"} /></a>
+                <a target="_blank" href="https://linkedin.com/in/ahmedbadran72/"><FaLinkedin className="text-gray-800 md:text-gray-800 motion-safe:animate-bounce hover:animate-none" size={"1.5em"} /></a>
+                <a target="_blank" href="https://github.com/0badran/"><FaGithub className="text-gray-800 motion-safe:animate-bounce hover:animate-none" size={"1.5em"} /></a>
               </div>
             </>
           }
@@ -120,11 +120,11 @@ export default function Home() {
               </div>
               <div className="flex justify-between w-80 border border-2 border-green-400 mt-7">
                 <h2 className="text-white uppercase p-4">full-stack developer</h2>
-                <Link href="#about">
+                <a href="#about">
                   <div className="bg-gray-800 md:bg-green-400 p-4">
                     <FaArrowRightLong size={"1.5em"} className="text-green-400 md:text-white" />
                   </div>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -153,12 +153,12 @@ export default function Home() {
                   I am Ahmed, 25 years old. a Bachelor’s degree in Information Systems, a passion for software development and IT. Along with my undergraduate degree, I have received training in Front-End UI and Cross-Platform Mobile Development from the Information Technology Institute (ITI) for 4 months and some online courses like CS50 and Egypt FWD. I have hands-on experience in UI development as a freelance front-end developer. I focus on developing innovative software solutions that enhance user experience and efficiently meet business needs. I love creating dynamic and user-friendly web applications using different skills and technologies like HTML, CSS, JavaScript, and React.js. I have a natural talent for problem-solving and enjoy creatively tackling complex challenges. I am always keen to learn innovative ideas and technologies to enhance my skills and stay up to date with the latest trends in the industry. I am very adaptable when it comes to working in new environments.
                 </p>
                 <div className="space-y-4 mt-7 px-5 md:p-0 md:space-x-4 md:text-center lg:text-left">
-                  <Link target="_blank" href="mailto:ahmedbadran_@outlook.com?subject=I wanna hire you&body=Hello, Dear Ahmed.%0D%0AYou are ready to take a position as a front-end web developer in a <𝒄𝒐𝒎𝒑𝒂𝒏𝒚 𝒏𝒂𝒎𝒆>, Reply to me in faster time.%0D%0A%0D%0A%0D%0AThanks a lot.%0D%0A<𝒚𝒐𝒖𝒓 𝒏𝒂𝒎𝒆>">
+                  <a target="_blank" href="mailto:ahmedbadran_@outlook.com?subject=I wanna hire you&body=Hello, Dear Ahmed.%0D%0AYou are ready to take a position as a front-end web developer in a <𝒄𝒐𝒎𝒑𝒂𝒏𝒚 𝒏𝒂𝒎𝒆>, Reply to me in faster time.%0D%0A%0D%0A%0D%0AThanks a lot.%0D%0A<𝒚𝒐𝒖𝒓 𝒏𝒂𝒎𝒆>">
                     <button className="border-2 mb-4 border-green-400 bg-green-400 px-16 py-2 rounded text-gray-900 shadow-lg hover:shadow-green-400/50 w-full md:w-fit">Hire Me</button>
-                  </Link>
-                  <Link target="_blank" href="https://1drv.ms/b/s!AgzdrzV12tnKpR8jAcZDGVs29Gd-?e=104NlC">
+                  </a>
+                  <a target="_blank" href="https://1drv.ms/b/s!AgzdrzV12tnKpR8jAcZDGVs29Gd-?e=104NlC">
                     <button className="border-2 border-green-400 px-10 py-2 rounded hover:bg-green-400 text-white shadow-lg hover:shadow-green-400/50 w-full md:w-fit">Preview CV</button>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -170,38 +170,38 @@ export default function Home() {
               <div className="border-b-2 border-green-400"></div>
             </div>
             <div className="grid grid-cols-3 gap-8" data-aos="zoom-in">
-              <Link href="#">
+              <a href="#">
                 <div className="transition mb-4 duration-700 origin-top-left hover:rotate-12">
                   <Image src={portfolio} width={700} height={700} placeholder={"blur"} alt="portfolio image" />
                 </div>
                 <div>
                   <span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Portfolio</span>
                 </div>
-              </Link>
-              <Link target="_blank" href="https://github.com/0badran/cs50-final-project#download-for-windows">
+              </a>
+              <a target="_blank" href="https://github.com/0badran/cs50-final-project#download-for-windows">
                 <div className="transition mb-4 duration-700 origin-top-left hover:rotate-12">
                   <Image src={pongGame} width={700} height={1980} alt="pong game image" unoptimized quality={100} />
                 </div>
                 <div>
                   <span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Pong Game</span>
                 </div>
-              </Link>
-              <Link target="_blank" href="https://movies-app-tan-beta.vercel.app/">
+              </a>
+              <a target="_blank" href="https://movies-app-tan-beta.vercel.app/">
                 <div className="transition mb-4 duration-700 origin-top-left hover:rotate-12">
                   <Image src={moviesApp} width={700} height={700} placeholder={"blur"} alt="movies app image" />
                 </div>
                 <div>
                   <span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Movies App</span>
                 </div>
-              </Link>
-              <Link target="_blank" href="https://jumia-clone-red.vercel.app/">
+              </a>
+              <a target="_blank" href="https://jumia-clone-red.vercel.app/">
                 <div className="transition mb-4 duration-700 origin-top-left hover:rotate-12">
                   <Image src={jumiaClone} width={700} height={700} placeholder={"blur"} alt="jumia clone image" />
                 </div>
                 <div>
                   <span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Jumia Clone App</span>
                 </div>
-              </Link>
+              </a>
             </div>
           </section>
           {/* Skills Section */}
