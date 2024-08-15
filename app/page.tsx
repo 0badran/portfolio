@@ -13,9 +13,8 @@ import portfolio from "@/public/images/portfolio.png";
 import pongGame from "@/public/images/pong-game.gif";
 import { skills } from "@/public/data/skills";
 import contactMe from "@/public/images/contact.jpeg";
-import dynamic from "next/dynamic";
 import Cube from "@/app/components/Cube";
-const Header = dynamic(() => import("@/app/components/Header"));
+import Header from "@/app/components/Header";
 
 export default function Home() {
 	const [state, setState] = useState<boolean>(false);
@@ -65,13 +64,13 @@ export default function Home() {
 					{/* About Section */}
 					<section id="about" className="mb-20 px-5 md:px-0">
 						<div className="grid lg:grid-cols-2 lg:space-x-6 xl:space-x-0">
-							{/* Left */}
+							{/* My Photo */}
 							<div data-aos="fade-up-right" className="text-center mb-3">
 								<div className="bg-green-400 inline-block">
 									<Image src={me} className="md:translate-x-8 md:-translate-y-8" width={500} height={500} alt="personal image" priority />
 								</div>
 							</div>
-							{/* Right */}
+							{/* Profile */}
 							<div data-aos="zoom-in">
 								<div className="lg:columns-2 mb-10">
 									<h2 className={`${montserrat.className} m-0 text-white text-3xl lg:text-4xl`}>About Me</h2>
@@ -135,7 +134,7 @@ export default function Home() {
 					{/* Skills Section */}
 					<section id="skills" data-aos="zoom-in" className="mb-20 px-5 md:px-0">
 						<div className="grid lg:grid-cols-2 gap-8 content-center">
-							{/* Content */}
+							{/* Skills */}
 							<div>
 								<div className="lg:columns-2 mb-10">
 									<div className="border-b-2 border-green-400 hidden lg:block"></div>
@@ -165,13 +164,13 @@ export default function Home() {
 					{/* Contact Me Section */}
 					<section id="contactMe" className="px-5 md:px-0">
 						<div className="lg:columns-2 lg:space-x-6 xl:space-x-0">
-							{/* Left */}
+							{/* Photo */}
 							<div data-aos="fade-up-right" className="text-center mb-3">
 								<div className="bg-green-400 inline-block">
 									<Image src={contactMe} className="md:translate-x-8 md:-translate-y-8" width={500} height={500} alt="contact image" />
 								</div>
 							</div>
-							{/* Right */}
+							{/* Contact details */}
 							<div data-aos="zoom-in">
 								<div className="lg:columns-2 mb-10">
 									<h2 className={`${montserrat.className} m-0 text-white text-3xl lg:text-4xl`}>Contact Details</h2>
