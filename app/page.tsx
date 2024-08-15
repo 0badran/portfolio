@@ -7,14 +7,11 @@ import { useEffect, useRef, useState } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import me from "@/public/images/me.png";
-import moviesApp from "@/public/images/movies-app.png";
-import jumiaClone from "@/public/images/jumia-clone.png";
-import portfolio from "@/public/images/portfolio.png";
-import pongGame from "@/public/images/pong-game.gif";
 import { skills } from "@/public/data/skills";
 import contactMe from "@/public/images/contact.jpeg";
 import dynamic from "next/dynamic";
 const Header = dynamic(() => import("@/app/components/Header"));
+const Projects = dynamic(() => import("@/app/components/Projects"));
 const Cube = dynamic(() => import("@/app/components/Cube"));
 
 
@@ -98,40 +95,7 @@ export default function Home() {
 							<h2 className={`${montserrat.className} m-0 text-white text-3xl lg:text-4xl`}>Recent Projects</h2>
 							<div className="border-b-2 border-green-400"></div>
 						</div>
-						<div className="grid grid-cols-3 gap-8" data-aos="fade-up-right">
-							<a href="#">
-								<div className="transition mb-4 duration-700 origin-top-left hover:rotate-12">
-									<Image src={portfolio} width={700} height={700} placeholder={"blur"} alt="portfolio image" />
-								</div>
-								<div>
-									<span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Portfolio</span>
-								</div>
-							</a>
-							<a target="_blank" href="https://github.com/0badran/cs50-final-project#download-for-windows">
-								<div className="transition mb-4 duration-700 origin-top-left hover:rotate-12">
-									<Image src={pongGame} width={700} height={1980} alt="pong game image" unoptimized quality={100} />
-								</div>
-								<div>
-									<span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Pong Game</span>
-								</div>
-							</a>
-							<a target="_blank" href="https://movies-app-tan-beta.vercel.app/">
-								<div className="transition mb-4 duration-700 origin-top-left hover:rotate-12">
-									<Image src={moviesApp} width={700} height={700} placeholder={"blur"} alt="movies app image" />
-								</div>
-								<div>
-									<span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Movies App</span>
-								</div>
-							</a>
-							<a target="_blank" href="https://jumia-clone-red.vercel.app/">
-								<div className="transition mb-4 duration-700 origin-top-left hover:rotate-12">
-									<Image src={jumiaClone} width={700} height={700} placeholder={"blur"} alt="jumia clone image" />
-								</div>
-								<div>
-									<span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Jumia Clone App</span>
-								</div>
-							</a>
-						</div>
+						<Projects />
 					</section>
 					{/* Skills Section */}
 					<section id="skills" data-aos="zoom-in" className="mb-20 px-5 md:px-0">
