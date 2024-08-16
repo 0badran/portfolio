@@ -14,8 +14,6 @@ import pongGame from "@/public/images/pong-game.gif";
 import { skills } from "@/public/data/skills";
 import contactMe from "@/public/images/contact.jpeg";
 import dynamic from "next/dynamic";
-// import Header from "@/app/components/Header";
-// import Cube from "@/app/components/Cube";
 const Header = dynamic(() => import("@/app/components/Header"));
 const Cube = dynamic(() => import("@/app/components/Cube"));
 
@@ -103,7 +101,7 @@ export default function Home() {
 						<div className="grid grid-cols-3 gap-8" data-aos="fade-up-right">
 							<a href="#">
 								<div className="transition mb-4 duration-700 origin-top-left hover:rotate-12">
-									<Image src={portfolio} width={700} height={700} placeholder={"blur"} alt="portfolio image" />
+									<Image src={portfolio} width={500} height={500} placeholder={"blur"} alt="portfolio image" />
 								</div>
 								<div>
 									<span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Portfolio</span>
@@ -111,15 +109,15 @@ export default function Home() {
 							</a>
 							<a target="_blank" href="https://github.com/0badran/cs50-final-project#download-for-windows">
 								<div className="transition mb-4 duration-700 origin-top-left hover:rotate-12">
-									<Image src={pongGame} width={700} height={700} alt="pong game image" unoptimized quality={100} />
+									<Image src={pongGame} width={500} height={500} alt="pong game image" unoptimized quality={100} />
 								</div>
 								<div>
-									<span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Pong Game</span>
+									<span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Pong Game (CS50 Final project)</span>
 								</div>
 							</a>
 							<a target="_blank" href="https://movies-app-tan-beta.vercel.app/">
 								<div className="transition mb-4 duration-700 origin-top-left hover:rotate-12">
-									<Image src={moviesApp} width={700} height={700} placeholder={"blur"} alt="movies app image" />
+									<Image src={moviesApp} width={500} height={500} placeholder={"blur"} alt="movies app image" />
 								</div>
 								<div>
 									<span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Movies App</span>
@@ -127,10 +125,10 @@ export default function Home() {
 							</a>
 							<a target="_blank" href="https://jumia-clone-red.vercel.app/">
 								<div className="transition mb-4 duration-700 origin-top-left hover:rotate-12">
-									<Image src={jumiaClone} width={700} height={700} placeholder={"blur"} alt="jumia clone image" />
+									<Image src={jumiaClone} width={500} height={500} placeholder={"blur"} alt="jumia clone image" />
 								</div>
 								<div>
-									<span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Jumia Clone App</span>
+									<span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Jumia Clone App (ITI Final project)</span>
 								</div>
 							</a>
 						</div>
