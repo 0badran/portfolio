@@ -29,7 +29,7 @@ export default function Header() {
             <h1 className="text-7xl text-white uppercase">I&apos;m Ahmed Badran</h1>
           </div>
           <div className="flex justify-between w-80 border border-2 border-green-400 mt-7">
-            <h2 className="text-white uppercase p-4">full-stack developer</h2>
+            <h2 className="text-white uppercase p-4">frontend developer</h2>
             <a href="#about">
               <div className="bg-gray-800 md:bg-green-400 p-4">
                 <FaArrowRightLong size={"1.5em"} className="text-green-400 md:text-white" />
