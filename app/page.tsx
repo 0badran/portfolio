@@ -100,15 +100,15 @@ export default function Home() {
 						</div>
 						<div className="grid grid-cols-3 gap-8" data-aos="fade-up-right">
 							<a href="#">
-								<div className="transition mb-4 duration-700 origin-top-left hover:rotate-12">
-									<Image src={portfolio} width={500} height={500} placeholder={"blur"} alt="portfolio image" />
+								<div className="transition mb-4 duration-700 border-4 border-green-400 origin-top-left hover:rotate-12">
+									<Image src={portfolio} width={500} height={500} alt="portfolio image" placeholder={"blur"} />
 								</div>
 								<div>
 									<span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Portfolio</span>
 								</div>
 							</a>
 							<a target="_blank" href="https://github.com/0badran/cs50-final-project#download-for-windows">
-								<div className="transition mb-4 duration-700 origin-top-left hover:rotate-12">
+								<div className="transition mb-4 duration-700 border-4 border-green-400 origin-top-left hover:rotate-12">
 									<Image src={pongGame} width={500} height={500} alt="pong game image" unoptimized quality={100} />
 								</div>
 								<div>
@@ -116,16 +116,16 @@ export default function Home() {
 								</div>
 							</a>
 							<a target="_blank" href="https://movies-app-tan-beta.vercel.app/">
-								<div className="transition mb-4 duration-700 origin-top-left hover:rotate-12">
-									<Image src={moviesApp} width={500} height={500} placeholder={"blur"} alt="movies app image" />
+								<div className="transition mb-4 duration-700 border-4 border-green-400 origin-top-left hover:rotate-12">
+									<Image src={moviesApp} width={500} height={500} alt="movies app image" placeholder={"blur"} />
 								</div>
 								<div>
 									<span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Movies App</span>
 								</div>
 							</a>
 							<a target="_blank" href="https://jumia-clone-red.vercel.app/">
-								<div className="transition mb-4 duration-700 origin-top-left hover:rotate-12">
-									<Image src={jumiaClone} width={500} height={500} placeholder={"blur"} alt="jumia clone image" />
+								<div className="transition mb-4 duration-700 border-4 border-green-400 origin-top-left hover:rotate-12">
+									<Image src={jumiaClone} width={500} height={500} alt="jumia clone image" placeholder={"blur"} />
 								</div>
 								<div>
 									<span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Jumia Clone App (ITI Final project)</span>
@@ -193,7 +193,7 @@ export default function Home() {
 				</div>
 			</main>
 			<footer className="bg-green-400 p-3 mx-5">
-				<h2 className="text-center text-xs font-bold text-gray-800">Made By Ahmed Badran ❤️ &copy; 2024</h2>
+				<h2 className="text-center text-xs font-bold text-gray-800">Made By Ahmed Badran &copy; 2024</h2>
 			</footer>
 		</>
 	);
