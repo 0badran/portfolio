@@ -17,7 +17,7 @@ export default function Header() {
           <span className={`${montserrat.className} hidden xl:block uppercase text-gray-800 col-span-2`}>profile accounts</span>
           <a target="_blank" href="https://facebook.com/0ahmedbadran/"><FaFacebook className="text-green-400 md:text-gray-800 motion-safe:animate-bounce hover:animate-none" size={"1.5em"} /></a>
           <a target="_blank" href="https://x.com/_ahmedbadran/"><FaTwitter className="text-green-400 md:text-gray-800 motion-safe:animate-bounce hover:animate-none" size={"1.5em"} /></a>
-          <a target="_blank" href="https://linkedin.com/in/ahmedbadran72/"><FaLinkedin className="text-gray-800 md:text-gray-800 motion-safe:animate-bounce hover:animate-none" size={"1.5em"} /></a>
+          <a target="_blank" href="https://linkedin.com/in/0badran/"><FaLinkedin className="text-gray-800 md:text-gray-800 motion-safe:animate-bounce hover:animate-none" size={"1.5em"} /></a>
           <a target="_blank" href="https://github.com/0badran/"><FaGithub className="text-gray-800 motion-safe:animate-bounce hover:animate-none" size={"1.5em"} /></a>
         </div>
 
@@ -28,7 +28,7 @@ export default function Header() {
             <h2 style={{ color: "#2AD87F" }}>Hello Everyone.</h2>
             <h1 className="text-7xl text-white uppercase">I&apos;m Ahmed Badran</h1>
           </div>
-          <div className="flex justify-between w-80 border border-2 border-green-400 mt-7">
+          <div className="flex justify-between w-80 border border-green-400 mt-7">
             <h2 className="text-white uppercase p-4">frontend developer</h2>
             <a href="#about">
               <div className="bg-gray-800 md:bg-green-400 p-4">

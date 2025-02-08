@@ -7,23 +7,13 @@ type Skill = {
 export const skills: Skill[] = [
     {
         id: 1,
-        name: "javaScript",
+        name: "JavaScript",
         degree: 80,
     },
     {
         id: 2,
-        name: "typeScript",
+        name: "TypeScript",
         degree: 80,
-    },
-    {
-        id: 3,
-        name: "Python",
-        degree: 80,
-    },
-    {
-        id: 4,
-        name: "C",
-        degree: 60,
     },
     {
         id: 6,
@@ -41,9 +31,9 @@ export const skills: Skill[] = [
         degree: 40,
     },
     {
-        id: 10,
-        name: "THREE JS",
-        degree: 15,
+        id: 4,
+        name: "React Native",
+        degree: 20,
     },
     {
         id: 11,
@@ -66,9 +56,14 @@ export const skills: Skill[] = [
         degree: 70,
     },
     {
+        id: 10,
+        name: "Zustand",
+        degree: 60,
+    },
+    {
         id: 15,
         name: "Redux",
-        degree: 60,
+        degree: 30,
     },
     {
         id: 16,
@@ -77,7 +72,7 @@ export const skills: Skill[] = [
     },
     {
         id: 17,
-        name: "Flask",
+        name: "React Query",
         degree: 40,
     },
     {

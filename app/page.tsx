@@ -1,19 +1,21 @@
 "use client";
+import { skills } from "@/public/data/skills";
 import { montserrat } from "@/public/fonts/fonts";
-import Image from "next/image";
-import { useTypewriter, Cursor } from "react-simple-typewriter";
-import clsx from "clsx";
-import { useEffect, useRef, useState } from "react";
+import contactMe from "@/public/images/contact.jpeg";
+import jomlah from "@/public/images/jomlah.png";
+import jumiaClone from "@/public/images/jumia-clone.png";
+import me from "@/public/images/me.jpeg";
+import pongGame from "@/public/images/pong-game.gif";
+import portfolio from "@/public/images/portfolio.png";
+import shgarde from "@/public/images/shgarde.png";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import me from "@/public/images/me.png";
-import moviesApp from "@/public/images/movies-app.png";
-import jumiaClone from "@/public/images/jumia-clone.png";
-import portfolio from "@/public/images/portfolio.png";
-import pongGame from "@/public/images/pong-game.gif";
-import { skills } from "@/public/data/skills";
-import contactMe from "@/public/images/contact.jpeg";
+import clsx from "clsx";
 import dynamic from "next/dynamic";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 const Header = dynamic(() => import("@/app/components/Header"));
 const Cube = dynamic(() => import("@/app/components/Cube"));
 
@@ -79,15 +81,22 @@ export default function Home() {
 									<div className="border-b-2 border-green-400"></div>
 								</div>
 								<p className="text-left text-white">
-									I am Ahmed, 25 years old. a Bachelor’s degree in Information Systems, a passion for software development and IT. Along with my undergraduate degree, I have received training in Front-End UI and Cross-Platform Mobile Development from the Information Technology Institute (ITI) for 4 months and some online courses like CS50 and Egypt FWD. I have hands-on experience in UI development as a freelance front-end developer. I focus on developing innovative software solutions that enhance user experience and efficiently meet business needs. I love creating dynamic and user-friendly web applications using different skills and technologies like HTML, CSS, JavaScript, and React.js. I have a natural talent for problem-solving and enjoy creatively tackling complex challenges. I am always keen to learn innovative ideas and technologies to enhance my skills and stay up to date with the latest trends in the industry. I am very adaptable when it comes to working in new environments.
+									I am Ahmed, with a Bachelor&apos;s degree in Information Systems and a passion for software development and IT.
+									I have received training in Front-End Development from the Information Technology Institute (ITI) for 4
+									months. I have hands-on experience in UI development. I focus on developing innovative software solutions
+									that enhance user experience and efficiently meet business needs. I love creating dynamic and user-friendly
+									web applications using technologies such as Reactjs, and Nextjs. I possess a natural talent for problem-solving
+									and enjoy creatively tackling complex challenges. I am always eager to learn about innovative ideas and
+									technologies, continually enhancing my skills to stay current with industry trends. Additionally, I am highly
+									adaptable and can quickly integrate into new work environments.
 								</p>
 								<div className="space-y-4 mt-7 px-5 md:p-0 md:space-x-4 md:text-center lg:text-left">
-									<a target="_blank" href="mailto:ahmedbadran_@outlook.com?subject=I wanna hire you&body=Hello, Dear Ahmed.%0D%0AYou are ready to take a position as a front-end web developer in a <𝒄𝒐𝒎𝒑𝒂𝒏𝒚 𝒏𝒂𝒎𝒆>, Reply to me in faster time.%0D%0A%0D%0A%0D%0AThanks a lot.%0D%0A<𝒚𝒐𝒖𝒓 𝒏𝒂𝒎𝒆>">
-										<button className="border-2 mb-4 border-green-400 bg-green-400 px-16 py-2 rounded text-gray-900 shadow-lg hover:shadow-green-400/50 w-full md:w-fit">Hire Me</button>
-									</a>
-									<a target="_blank" href="https://1drv.ms/b/s!AgzdrzV12tnKpR8jAcZDGVs29Gd-?e=104NlC">
+									<Link target="_blank" href="mailto:ahmedbadran_@outlook.com?subject=I wanna hire you&body=Hello, Dear Ahmed.%0D%0AYou are ready to take a position as a front-end web developer in a <𝒄𝒐𝒎𝒑𝒂𝒏𝒚 𝒏𝒂𝒎𝒆>, Reply to me in faster time.%0D%0A%0D%0A%0D%0AThanks a lot.%0D%0A<𝒚𝒐𝒖𝒓 𝒏𝒂𝒎𝒆>">
+										<button className="border-2 border-green-400 px-10 py-2 rounded bg-green-400 text-gray-800 shadow-lg hover:shadow-green-400/50 w-full md:w-fit">Hire Me</button>
+									</Link>
+									<Link target="_blank" href="https://1drv.ms/b/c/cad9da7535afdd0c/EbJrq_NYsztLv9YNy3DaGV0BFC3OSolNTmReEv0Yj55PwA?e=snICfT">
 										<button className="border-2 border-green-400 px-10 py-2 rounded hover:bg-green-400 text-white shadow-lg hover:shadow-green-400/50 w-full md:w-fit">Preview CV</button>
-									</a>
+									</Link>
 								</div>
 							</div>
 						</div>
@@ -99,38 +108,46 @@ export default function Home() {
 							<div className="border-b-2 border-green-400"></div>
 						</div>
 						<div className="grid grid-cols-3 gap-8" data-aos="fade-up-right">
-							<a href="#">
+							<Link href="#">
 								<div className="transition mb-4 duration-700 border-4 border-green-400 origin-top-left hover:rotate-12">
 									<Image src={portfolio} width={500} height={500} alt="portfolio image" placeholder={"blur"} />
 								</div>
 								<div>
 									<span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Portfolio</span>
 								</div>
-							</a>
-							<a target="_blank" href="https://github.com/0badran/cs50-final-project#download-for-windows">
+							</Link>
+							<Link target="_blank" href="https://github.com/0badran/cs50-final-project#download-for-windows">
 								<div className="transition mb-4 duration-700 border-4 border-green-400 origin-top-left hover:rotate-12">
 									<Image src={pongGame} width={500} height={500} alt="pong game image" unoptimized quality={100} />
 								</div>
 								<div>
 									<span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Pong Game (CS50 Final project)</span>
 								</div>
-							</a>
-							<a target="_blank" href="https://movies-app-tan-beta.vercel.app/">
-								<div className="transition mb-4 duration-700 border-4 border-green-400 origin-top-left hover:rotate-12">
-									<Image src={moviesApp} width={500} height={500} alt="movies app image" placeholder={"blur"} />
-								</div>
-								<div>
-									<span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Movies App</span>
-								</div>
-							</a>
-							<a target="_blank" href="https://jumia-clone-red.vercel.app/">
+							</Link>
+							<Link target="_blank" href="https://jumia-clone-red.vercel.app/">
 								<div className="transition mb-4 duration-700 border-4 border-green-400 origin-top-left hover:rotate-12">
 									<Image src={jumiaClone} width={500} height={500} alt="jumia clone image" placeholder={"blur"} />
 								</div>
 								<div>
 									<span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Jumia Clone App (ITI Final project)</span>
 								</div>
-							</a>
+							</Link>
+							<Link target="_blank" href="https://movies-app-tan-beta.vercel.app/">
+								<div className="transition mb-4 duration-700 border-4 border-green-400 origin-top-left hover:rotate-12">
+									<Image src={shgarde} width={500} height={500} alt="movies app image" placeholder={"blur"} />
+								</div>
+								<div>
+									<span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Shgarde App (E-Commerce)</span>
+								</div>
+							</Link>
+							<Link target="_blank" href="https://movies-app-tan-beta.vercel.app/">
+								<div className="transition mb-4 duration-700 border-4 border-green-400 origin-top-left hover:rotate-12">
+									<Image src={jomlah} width={500} height={500} alt="movies app image" placeholder={"blur"} />
+								</div>
+								<div>
+									<span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Jomlah App (E-Commerce)</span>
+								</div>
+							</Link>
 						</div>
 					</section>
 					{/* Skills Section */}
@@ -150,7 +167,7 @@ export default function Home() {
 									{
 										skills.map(skill =>
 											<button key={skill.id} data-aos="fade-up-right" className="bg-gray-800 transform group text-green-400 border-2 border-green-400 p-2 shadow-lg rounded hover:duration-700 hover:text-gray-800 hover:bg-green-400 hover:shadow-green-400/50">
-												<p className="p-0 m-0">{skill.name}</p>
+												<p className="p-0 m-0 text-nowrap">{skill.name}</p>
 												<div className="w-full bg-white rounded-3xl text-center h-1.5 p-0 m-0 invisible group-hover:visible">
 													<div className='bg-gray-800 h-1.5 rounded-3xl p-0 m-0' style={{ width: `${skill.degree}%` }}></div>
 												</div>
