@@ -27,7 +27,7 @@ export default function Home() {
 
 	const [text, helper] = useTypewriter({
 		words: ["I'm", "Ahmed", "Badran", `I'm Ahmed Mohamed Badran`],
-		typeSpeed: 100,
+		typeSpeed: 110,
 		deleteSpeed: 80,
 	});
 
