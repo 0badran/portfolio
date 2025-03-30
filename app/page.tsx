@@ -107,7 +107,7 @@ export default function Home() {
 						<div className="grid grid-cols-3 gap-8" data-aos="fade-up-right">
 							{projects.map((project) => (
 								<Link key={project.id} target="_blank" href={project.url}>
-									<div className="transition mb-4 duration-700 border-4 border-green-400 origin-top-left hover:rotate-12">
+									<div className="transition mb-4 duration-700 border-2 lg:border-4 border-green-400 origin-top-left hover:rotate-12">
 										<Image src={project.image} width={500} height={500} alt={`${project.name} photo`} />
 									</div>
 									<div>
