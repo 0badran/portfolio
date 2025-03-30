@@ -2,12 +2,8 @@
 import { skills } from "@/public/data/skills";
 import { montserrat } from "@/public/fonts/fonts";
 import contactMe from "@/public/images/contact.jpeg";
-import jomlah from "@/public/images/jomlah.png";
-import jumiaClone from "@/public/images/jumia-clone.png";
 import me from "@/public/images/me.jpeg";
-import pongGame from "@/public/images/pong-game.gif";
 import portfolio from "@/public/images/portfolio.png";
-import shgarde from "@/public/images/shgarde.png";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import clsx from "clsx";
@@ -16,6 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
+import projects from "./data/projects";
 const Header = dynamic(() => import("@/app/components/Header"));
 const Cube = dynamic(() => import("@/app/components/Cube"));
 
@@ -108,46 +105,16 @@ export default function Home() {
 							<div className="border-b-2 border-green-400"></div>
 						</div>
 						<div className="grid grid-cols-3 gap-8" data-aos="fade-up-right">
-							<Link href="#">
-								<div className="transition mb-4 duration-700 border-4 border-green-400 origin-top-left hover:rotate-12">
-									<Image src={portfolio} width={500} height={500} alt="portfolio image" placeholder={"blur"} />
-								</div>
-								<div>
-									<span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Portfolio</span>
-								</div>
-							</Link>
-							<Link target="_blank" href="https://github.com/0badran/cs50-final-project#download-for-windows">
-								<div className="transition mb-4 duration-700 border-4 border-green-400 origin-top-left hover:rotate-12">
-									<Image src={pongGame} width={500} height={500} alt="pong game image" unoptimized quality={100} />
-								</div>
-								<div>
-									<span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Pong Game (CS50 Final project)</span>
-								</div>
-							</Link>
-							<Link target="_blank" href="https://jumia-clone-red.vercel.app/">
-								<div className="transition mb-4 duration-700 border-4 border-green-400 origin-top-left hover:rotate-12">
-									<Image src={jumiaClone} width={500} height={500} alt="jumia clone image" placeholder={"blur"} />
-								</div>
-								<div>
-									<span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Jumia Clone App (ITI Final project)</span>
-								</div>
-							</Link>
-							<Link target="_blank" href="https://movies-app-tan-beta.vercel.app/">
-								<div className="transition mb-4 duration-700 border-4 border-green-400 origin-top-left hover:rotate-12">
-									<Image src={shgarde} width={500} height={500} alt="movies app image" placeholder={"blur"} />
-								</div>
-								<div>
-									<span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Shgarde App (E-Commerce)</span>
-								</div>
-							</Link>
-							<Link target="_blank" href="https://movies-app-tan-beta.vercel.app/">
-								<div className="transition mb-4 duration-700 border-4 border-green-400 origin-top-left hover:rotate-12">
-									<Image src={jomlah} width={500} height={500} alt="movies app image" placeholder={"blur"} />
-								</div>
-								<div>
-									<span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">Jomlah App (E-Commerce)</span>
-								</div>
-							</Link>
+							{projects.map((project) => (
+								<Link key={project.id} target="_blank" href={project.url}>
+									<div className="transition mb-4 duration-700 border-4 border-green-400 origin-top-left hover:rotate-12">
+										<Image src={project.image} width={500} height={500} alt={`${project.name} photo`} />
+									</div>
+									<div>
+										<span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">{project.name}</span>
+									</div>
+								</Link>
+							))}
 						</div>
 					</section>
 					{/* Skills Section */}
@@ -161,7 +128,7 @@ export default function Home() {
 									<div className="border-b-2 border-green-400 block lg:hidden"></div>
 								</div>
 								<p className="text-left text-white mb-4">
-									I have already worked on all the languages ​​and tools mentioned, some are advanced and some are simple. What I mean is that I have used these tools before, not just talking.
+									I have already worked on all the languages and tools mentioned, some are advanced and some are simple. What I mean is that I have used these tools before, not just talking.
 								</p>
 								<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
 									{
