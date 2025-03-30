@@ -15,10 +15,10 @@ export default function Header() {
 
         <div id="icons-animation" className="grid grid-cols-4 gap-24 my-4 md:gap-14 lg:gap-20 xl:mt-0 xl:grid-cols-6 xl:gap-4">
           <span className={`${montserrat.className} hidden xl:block uppercase text-gray-800 col-span-2`}>profile accounts</span>
-          <a target="_blank" href="https://facebook.com/0ahmedbadran/"><FaFacebook className="text-green-400 md:text-gray-800 motion-safe:animate-bounce hover:animate-none" size={"1.5em"} /></a>
-          <a target="_blank" href="https://x.com/_ahmedbadran/"><FaTwitter className="text-green-400 md:text-gray-800 motion-safe:animate-bounce hover:animate-none" size={"1.5em"} /></a>
-          <a target="_blank" href="https://linkedin.com/in/0badran/"><FaLinkedin className="text-gray-800 md:text-gray-800 motion-safe:animate-bounce hover:animate-none" size={"1.5em"} /></a>
-          <a target="_blank" href="https://github.com/0badran/"><FaGithub className="text-gray-800 motion-safe:animate-bounce hover:animate-none" size={"1.5em"} /></a>
+          <a target="_blank" href="https://facebook.com/0ahmedbadran/"><FaFacebook className="text-green-400 md:text-gray-800 animate-bounce hover:animate-none" size={"1.5em"} /></a>
+          <a target="_blank" href="https://x.com/_ahmedbadran/"><FaTwitter className="text-green-400 md:text-gray-800 animate-bounce hover:animate-none" size={"1.5em"} /></a>
+          <a target="_blank" href="https://linkedin.com/in/0badran/"><FaLinkedin className="text-gray-800 md:text-gray-800 animate-bounce hover:animate-none" size={"1.5em"} /></a>
+          <a target="_blank" href="https://github.com/0badran/"><FaGithub className="text-gray-800 animate-bounce hover:animate-none" size={"1.5em"} /></a>
         </div>
 
       </div>
