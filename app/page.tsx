@@ -108,10 +108,10 @@ export default function Home() {
 							{projects.map((project) => (
 								<Link key={project.id} target="_blank" href={project.url}>
 									<div className="transition mb-4 duration-700 border-2 lg:border-4 border-green-400 origin-top-left hover:rotate-12">
-										<Image src={project.image} width={500} height={500} alt={`${project.name} photo`} />
+										<Image src={project.image} className="lg:h-53" width={500} height={500} alt={`${project.name} photo`} />
 									</div>
 									<div>
-										<span className="text-green-400 text-xl font-bold shadow-lg hover:shadow-green-400/50">{project.name}</span>
+										<span className="text-green-400 text-xl line-clamp-1 font-bold shadow-lg shadow-transparent hover:shadow-green-400/50">{project.name}</span>
 									</div>
 								</Link>
 							))}

@@ -35,6 +35,18 @@ const projects = [
       image: "/images/todos-list.png",
       url: "https://todos-list-badran.vercel.app/todo",
    },
+   {
+      id: Math.random(),
+      name: "EnzaTrading",
+      image: "/images/enza.png",
+      url: "https://enzatrading.com/",
+   },
+   {
+      id: Math.random(),
+      name: "Art Space",
+      image: "/images/art-space.png",
+      url: "https://artspace.sa/",
+   },
 ];
 
 export default projects;
