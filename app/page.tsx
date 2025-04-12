@@ -92,7 +92,7 @@ export default function Home() {
 										<button className="border-2 border-green-400 px-10 py-2 rounded bg-green-400 text-gray-800 shadow-lg hover:shadow-green-400/50 w-full md:w-fit">Hire Me</button>
 									</Link>
 									<Link target="_blank" href="https://1drv.ms/b/c/cad9da7535afdd0c/EbJrq_NYsztLv9YNy3DaGV0BFC3OSolNTmReEv0Yj55PwA?e=snICfT">
-										<button className="border-2 border-green-400 px-10 py-2 rounded hover:bg-green-400 text-white shadow-lg hover:shadow-green-400/50 w-full md:w-fit">Preview CV</button>
+										<button className="border-2 mt-4 md:mt-0 border-green-400 px-10 py-2 rounded md:hover:bg-green-400 text-white shadow-lg hover:shadow-green-400/50 w-full md:w-fit">Preview CV</button>
 									</Link>
 								</div>
 							</div>
